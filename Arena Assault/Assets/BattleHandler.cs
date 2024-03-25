@@ -10,8 +10,11 @@ public class BattleHandler : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
 
-    //Unit playerCharacter;
-    //Unit enemyCharacter;
+    Unit playerCharacter;
+    Unit enemyCharacter;
+
+    //public HPHandler playerHP;
+    //public HPHandler enemyHP;
 
     public StateofBattle state;
     // Start is called before the first frame update
@@ -23,10 +26,12 @@ public class BattleHandler : MonoBehaviour
 
     public void BattleSetup()
     {
-         Instantiate(playerPrefab);
-        //playerCharacter = playerSTART.GetComponent<Unit>();
-         Instantiate(enemyPrefab);
-        //enemyCharacter = enemySTART.GetComponent<Unit>();
+          Instantiate(playerPrefab);
+         //playerCharacter = playerSTART.GetComponent<Unit>();
+          Instantiate(enemyPrefab);
+         //enemyCharacter = enemySTART.GetComponent<Unit>();
+
+        //playerHP.SetHP(playerCharacter);
     }
 
 }
