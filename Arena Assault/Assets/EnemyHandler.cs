@@ -2,10 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHandler : MonoBehaviour
+[CreateAssetMenu(fileName = "Challenger", menuName = "Enemy/Create new enemy")]
+public class EnemyHandler : ScriptableObject
 {
-    public string challengerName;
-    public int damage;
-    public int maxHealth;
-    public int cHealth;
+    [SerializeField] string challengerName;
+    [SerializeField] Sprite fSprite;
+
+
+    //Enemy Stats
+    [SerializeField] int Maxhealth;
+    [SerializeField] int attack;
+    [SerializeField] int spd;
+}
+
+public enum Attacktype
+{
+    Poison,
+    Fire,
+    Electric
+
 }

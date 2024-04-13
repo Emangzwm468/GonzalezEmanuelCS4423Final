@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da2e9257b693344c874b24c5e2f6329, type: 3}
+  m_Name: Tackle
+  m_EditorClassIdentifier: 
+  Attack_Name: Tackle
+  Attack_Description: The unit lunges foward to their attacker dealing damage.
+  Attack_Power: 2
