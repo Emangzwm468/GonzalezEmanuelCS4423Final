@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class HealthBarManager : MonoBehaviour
 {
-    public Transform foregroundTransform;
+    [SerializeField] GameObject health;
 
-    [Range(0f,1f)]
-    public float percentage = 1f;
-
-    // Update is called once per frame
-    void Update()
+    public void HPSet(float healthNormalized)
     {
-        foregroundTransform.localScale = new Vector3(percentage, 1f, 1f);
-
+       health.transform.localScale = new Vector3(healthNormalized, 1f);
     }
 }

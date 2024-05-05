@@ -520,8 +520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8e7df48497c34f97fe3175280f7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundTransform: {fileID: 1316602730}
-  percentage: 1
+  health: {fileID: 0}
 --- !u!114 &207171816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,9 +615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 251fe2fac47af564cb045ab1e0edc9b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 7911285688773922215, guid: 996cc60a96ea233408cb25de0e8e5eab, type: 3}
-  enemyPrefab: {fileID: 994386588133615520, guid: 019ae82b23692d64483d8e44f9123a81, type: 3}
-  state: 0
 --- !u!1 &374954457
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,8 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8e7df48497c34f97fe3175280f7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundTransform: {fileID: 1660769051}
-  percentage: 1
+  health: {fileID: 0}
 --- !u!114 &632048963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,8 +1277,8 @@ RectTransform:
   m_GameObject: {fileID: 952977099}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.97, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 632048961}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1316,8 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8e7df48497c34f97fe3175280f7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foregroundTransform: {fileID: 0}
-  percentage: 1
+  health: {fileID: 0}
 --- !u!114 &952977103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1775,7 +1769,7 @@ RectTransform:
   m_GameObject: {fileID: 1660769050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.97, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 632048961}
