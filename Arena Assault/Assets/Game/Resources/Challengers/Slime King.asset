@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49cf8fc8bc8d7154a9042f1cc976a43f, type: 3}
   m_Name: Slime King
   m_EditorClassIdentifier: 
-  challengerName: 
-  fSprite: {fileID: 0}
-  Maxhealth: 0
-  attack: 0
-  spd: 0
+  challengerName: Slime King
+  fSprite: {fileID: 21300000, guid: 67004fea5cc0b9f469342f4f9d8d549d, type: 3}
+  Maxhealth: 15
+  attack: 5
+  spd: 2
