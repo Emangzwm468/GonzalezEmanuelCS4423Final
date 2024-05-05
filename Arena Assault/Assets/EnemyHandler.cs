@@ -9,10 +9,35 @@ public class EnemyHandler : ScriptableObject
     [SerializeField] Sprite fSprite;
 
 
-    //Enemy Stats
+    //Enemy/Challenger Stats
     [SerializeField] int Maxhealth;
     [SerializeField] int attack;
     [SerializeField] int spd;
+
+    public string ChallengerName
+    {
+        get { return challengerName; }
+    }
+
+    public Sprite FSprite
+    {
+        get { return fSprite; }
+    }
+
+    public int MaxHealth
+    {
+        get { return Maxhealth; }
+    }
+
+    public int Attack
+    {
+        get { return attack; }
+    }
+
+    public int Spd
+    {
+        get { return spd; }
+    }
 }
 
 public enum Attacktype
