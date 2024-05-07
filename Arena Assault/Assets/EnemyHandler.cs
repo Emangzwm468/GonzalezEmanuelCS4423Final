@@ -40,6 +40,11 @@ public class EnemyHandler : ScriptableObject
     }
 }
 
+public class Moves
+{
+    [SerializeField] AttacksHandler attackHandler;
+}
+
 public enum Attacktype
 {
     Poison,
