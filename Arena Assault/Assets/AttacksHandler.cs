@@ -10,4 +10,20 @@ public class AttacksHandler : ScriptableObject
     [TextArea]
     [SerializeField] string Attack_Description;
     [SerializeField] int Attack_Power;
+
+    public string attackName
+    {
+        get { return Attack_Name; }
+    }
+
+    public string description
+    {
+        get { return Attack_Description; }
+    }
+
+    public int attackPower
+    {
+        get { return Attack_Power; }
+    }
 }
+
