@@ -1,28 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro.EditorUtilities;
 using UnityEngine;
 
 public class Challengers
 {
-    EnemyHandler _challengers;
+    public EnemyHandler challengers { get; set; }
+
+    public int HP { get; set; }
 
     public Challengers(EnemyHandler pChanllenger)
     {
-        _challengers = pChanllenger;
+        challengers = pChanllenger;
+        HP = MaxHealth;
     }
 
     public int Attack 
     {  
-        get { return _challengers.Attack;} 
+        get { return challengers.Attack;} 
     }
 
     public int Spd
     {
-        get { return _challengers.Spd; }
+        get { return challengers.Spd; }
     }
 
     public int MaxHealth
     {
-        get { return _challengers.MaxHealth; }
+        get { return challengers.MaxHealth; }
+    }
+
+    public int Health
+    {
+        get { return challengers.Health; }
     }
 }

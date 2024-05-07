@@ -14,6 +14,8 @@ public class EnemyHandler : ScriptableObject
     [SerializeField] int attack;
     [SerializeField] int spd;
 
+    [SerializeField] int health;
+
     public string ChallengerName
     {
         get { return challengerName; }
@@ -37,6 +39,11 @@ public class EnemyHandler : ScriptableObject
     public int Spd
     {
         get { return spd; }
+    }
+
+    public int Health
+    {
+        get { return health; }
     }
 }
 

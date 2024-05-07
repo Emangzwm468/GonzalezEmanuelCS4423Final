@@ -6,15 +6,9 @@ using UnityEngine.UI;
 public class BattleHud : MonoBehaviour
 {
     [SerializeField] HealthBarManager health;
-    // Start is called before the first frame update
-   public void SetData()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void SetData(Challengers challenger)
     {
-        
+        health.HPSet((float)challenger.Health/ challenger.MaxHealth);
     }
 }
