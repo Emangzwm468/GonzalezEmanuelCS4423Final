@@ -55,11 +55,11 @@ public class Challengers
         return false;
     }
 
-    public Attacks GetRandomAttacks()
+    /*public Attacks GetRandomAttacks()
     {
         int i;
 
         i = UnityEngine.Random.Range(0, Attacks.Count);
         return Attacks[i];
-    }
+    }*/
 }

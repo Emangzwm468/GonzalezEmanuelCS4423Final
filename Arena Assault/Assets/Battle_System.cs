@@ -49,11 +49,11 @@ public class Battle_System : MonoBehaviour
          */
     }
 
-    IEnumerator EnemyMove()
-    {
-        state = BattleState.EnemyMove;
+    //IEnumerator EnemyMove()
+    //{
+        //state = BattleState.EnemyMove;
 
-        var move = enemyUnit.Challengers.GetRandomAttacks();
+        //var move = enemyUnit.Challengers.GetRandomAttacks();
 
         // bool isDead = enemyUnit.Challengers.TakeDamage(attacks, playerUnit.Challengers);
 
@@ -66,7 +66,7 @@ public class Battle_System : MonoBehaviour
          *     PlayerAction();
          * }
          */
-    }
+    //}
 
     private void Update()
     {
@@ -110,11 +110,11 @@ public class Battle_System : MonoBehaviour
 
     void HandleMoveSelection()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        /*if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (currMove < PlayerUnit.Challengers.Attacks.Count - 1)
                 ++currMove;
-        }
+        }*/
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
