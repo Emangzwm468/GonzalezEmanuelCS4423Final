@@ -32,8 +32,40 @@ public class Battle_System : MonoBehaviour
 
     IEnumerator PerformPlayerMove()
     {
+        state = BattleState.Busy;
         var move = currentAction;
         yield return null;
+
+        // bool isDead = enemyUnit.Challengers.TakeDamage(attacks, playerUnit.Challenger);
+
+        /*if (isDead)
+         * {
+         *    yield return dialogBox.TypeDialog($"(enemyUnit.Challengers.EnemyHandler.challengerName) had been defeated!");
+         * }
+         * else
+         * {
+         *     StartCourtine(EnemyMove());
+         * }
+         */
+    }
+
+    IEnumerator EnemyMove()
+    {
+        state = BattleState.EnemyMove;
+
+        var move = enemyUnit.Challengers.GetRandomAttacks();
+
+        // bool isDead = enemyUnit.Challengers.TakeDamage(attacks, playerUnit.Challengers);
+
+        /*if (isDead)
+         * {
+         *    yield return dialogBox.TypeDialog($"(playerUnit.Challengers.EnemyHandler.challengerName) has been defeatd!");
+         * }
+         * else
+         * {
+         *     PlayerAction();
+         * }
+         */
     }
 
     private void Update()

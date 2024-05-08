@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro.EditorUtilities;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Challengers
@@ -33,5 +35,31 @@ public class Challengers
     public int Health
     {
         get { return challengers.Health; }
+    }
+
+    public bool DamageTaken(Attacks attack, Challengers attacker)
+    {
+        int damage;
+
+        float modifiers = UnityEngine.Random.Range(0.05f, 1f);
+
+        damage = Mathf.FloorToInt(modifiers);
+
+        HP -= damage;
+        if (HP < 0)
+        {
+            HP = 0;
+            return true;
+        }
+
+        return false;
+    }
+
+    public Attacks GetRandomAttacks()
+    {
+        int i;
+
+        i = UnityEngine.Random.Range(0, Attacks.Count);
+        return Attacks[i];
     }
 }
