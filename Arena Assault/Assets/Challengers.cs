@@ -9,9 +9,9 @@ public class Challengers
 
     public int HP { get; set; }
 
-    public Challengers(EnemyHandler pChanllenger)
+    public Challengers(EnemyHandler pChallenger)
     {
-        challengers = pChanllenger;
+        challengers = pChallenger;
         HP = MaxHealth;
     }
 
