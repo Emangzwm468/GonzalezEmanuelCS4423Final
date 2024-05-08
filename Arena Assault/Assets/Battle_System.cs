@@ -8,6 +8,7 @@ public class Battle_System : MonoBehaviour
 {
     //[SerializeField]
     //[SerializeField] BattleHud playerHud;
+    [SerializeField] DialougeBox dialougeBox;
 
     BattleState state;
     int currentAction;
@@ -24,6 +25,7 @@ public class Battle_System : MonoBehaviour
     void PlayerAction()
     {
         state = BattleState.Start;
+        dialougeBox.EnableActionSelection(true);
     }
 
     private void Update()
@@ -47,5 +49,6 @@ public class Battle_System : MonoBehaviour
             if (currentAction > 0)
                 --currentAction;
         }
+        dialougeBox.UpdateActionSelection(currentAction);
     }
 }
