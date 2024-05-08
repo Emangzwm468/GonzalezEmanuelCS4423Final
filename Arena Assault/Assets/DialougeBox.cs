@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ public class DialougeBox : MonoBehaviour
     [SerializeField] GameObject moveSelector;
 
     [SerializeField] Color highlightText;
-    [SerializeField] List<Text> actionText;
+    [SerializeField] List<TextMeshProUGUI> actionText;
 
     public void SetDialog(string dialog)
     {
@@ -35,8 +36,17 @@ public class DialougeBox : MonoBehaviour
     {
         for(int i = 0; i < actionText.Count; ++i)
         {
-            if i == selectedAction)
-                actionText[i].color = Color.black;
+            if (i == selectedAction)
+                actionText[i].color = Color.red;
+        }
+    }
+
+    public void UpdateMoveSelection(int selectedMove)
+    {
+        for (int i = 0; i < actionText.Count; ++i)
+        {
+            if (i == selectedMove)
+                actionText[i].color = Color.red;
         }
     }
 }
