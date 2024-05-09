@@ -15,6 +15,7 @@ public class EnemyHandler : ScriptableObject
     [SerializeField] int spd;
 
     [SerializeField] int health;
+    [SerializeField] List<KnownAttacks> knownAttacks;
 
     public string ChallengerName
     {
@@ -45,17 +46,29 @@ public class EnemyHandler : ScriptableObject
     {
         get { return health; }
     }
-}
 
-public class Moves
-{
-    [SerializeField] AttacksHandler attackHandler;
-}
+    public List<KnownAttacks> Attacks
+    {
+        get { return knownAttacks; }
+    }
 
-public enum Attacktype
-{
-    Poison,
-    Fire,
-    Electric
+    [System.Serializable]
 
+    public class KnownAttacks
+    {
+        [SerializeField] AttacksHandler attacks;
+
+        public AttacksHandler knownAttacks
+        {
+            get { return attacks; }
+        }
+    }
+
+    public enum Attacktype
+    {
+        Poison,
+        Fire,
+        Electric
+
+    }
 }

@@ -6,34 +6,34 @@ using UnityEngine;
 
 public class Challengers
 {
-    public EnemyHandler challengers { get; set; }
+    EnemyHandler _challengers { get; set; }
 
-    public int HP { get; set; }
+    int HP { get; set; }
 
     public Challengers(EnemyHandler pChallenger)
     {
-        challengers = pChallenger;
+        _challengers = pChallenger;
         HP = MaxHealth;
     }
 
     public int Attack 
     {  
-        get { return challengers.Attack;} 
+        get { return Mathf.FloorToInt(5 + 1);} 
     }
 
     public int Spd
     {
-        get { return challengers.Spd; }
+        get { return Mathf.FloorToInt(1 + 1); }
     }
 
     public int MaxHealth
     {
-        get { return challengers.MaxHealth; }
+        get { return Mathf.FloorToInt(5 + 1); }
     }
 
     public int Health
     {
-        get { return challengers.Health; }
+        get { return _challengers.Health; }
     }
 
     public bool DamageTaken(Attacks attack, Challengers attacker)

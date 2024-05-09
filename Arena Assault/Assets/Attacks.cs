@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Attacks
 {
-    public AttacksHandler AttacksHandler { get; set; }
+    public AttacksHandler Attacks_Handler { get; set; }
  
-    public Attacks(AttacksHandler attacksHandler)
+    public Attacks(AttacksHandler pAttacks)
     {
-        AttacksHandler = attacksHandler;
+        Attacks_Handler = pAttacks;
     }
 }
