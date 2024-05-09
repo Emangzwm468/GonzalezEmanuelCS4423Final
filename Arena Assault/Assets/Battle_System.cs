@@ -6,7 +6,8 @@ public enum BattleState { Start, PlayerAction, PlayerMove, EnemyMove, Busy}
 
 public class Battle_System : MonoBehaviour
 {
-    //[SerializeField]
+    [SerializeField] PlayerUnit pUnit;
+    [SerializeField] PlayerUnit eUnit;
     //[SerializeField] BattleHud playerHud;
     [SerializeField] DialougeBox dialougeBox;
 
@@ -20,19 +21,28 @@ public class Battle_System : MonoBehaviour
     }
     public IEnumerator BattleSetup()
     {
+        pUnit.Setup();
+        eUnit.Setup();
         PlayerAction();
         yield return null;
     }
 
     void PlayerAction()
     {
-        state = BattleState.Start;
+        state = BattleState.PlayerAction;
         dialougeBox.EnableActionSelection(true);
+    }
+
+    void PlayerMove()
+    {
+        state = BattleState.PlayerMove;
+        dialougeBox.EnableActionSelection(false);
+        dialougeBox.EnabledMoveSelector(true);
     }
 
     IEnumerator PerformPlayerMove()
     {
-        state = BattleState.Busy;
+        
         var move = currentAction;
         yield return null;
 
@@ -95,11 +105,11 @@ public class Battle_System : MonoBehaviour
         }
         dialougeBox.UpdateActionSelection(currentAction);
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             if(currentAction == 0)
             {
-                PlayerAction();
+                PlayerMove();
             }
             else if (currentAction == 1)
             {

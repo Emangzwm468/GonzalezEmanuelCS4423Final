@@ -12,6 +12,7 @@ public class DialougeBox : MonoBehaviour
 
     [SerializeField] Color highlightText;
     [SerializeField] List<TextMeshProUGUI> actionText;
+    [SerializeField] List<TextMeshProUGUI> moveText;
 
     public void SetDialog(string dialog)
     {
@@ -47,6 +48,8 @@ public class DialougeBox : MonoBehaviour
         {
             if (i == selectedMove)
                 actionText[i].color = Color.red;
+            else
+                actionText[i].color = Color.black;
         }
     }
 }
