@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Challengers
 {
-    EnemyHandler _challengers { get; set; }
+   public EnemyHandler Challenger { get; set; }
 
     public int HP { get; set; }
 
@@ -14,8 +14,8 @@ public class Challengers
 
     public Challengers(EnemyHandler pChallenger)
     {
-        _challengers = pChallenger;
-        HP = _challengers.MaxHealth;
+        Challenger = pChallenger;
+        HP = MaxHealth;
 
         /*Attacks = new List<Attacks>();
         foreach (var attack in _challengers.Attacks)
@@ -42,7 +42,7 @@ public class Challengers
 
     public int Health
     {
-        get { return _challengers.Health; }
+        get { return Challenger.Health; }
     }
 
     public bool DamageTaken(Attacks attack, Challengers attacker)

@@ -857,7 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8e7df48497c34f97fe3175280f7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: {fileID: 0}
+  health: {fileID: 952977099}
 --- !u!114 &632048963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1369,6 +1369,7 @@ GameObject:
   - component: {fileID: 1187233814}
   - component: {fileID: 1187233813}
   - component: {fileID: 1187233815}
+  - component: {fileID: 1187233816}
   m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
@@ -1446,6 +1447,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 632048962}
+--- !u!114 &1187233816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187233811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6f961356056238439fb5aaddfafcfd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _challengers: {fileID: 11400000, guid: 0c79d4528e283a846a6db4633d464493, type: 2}
+  isPUnit: 1
 --- !u!1 &1316602729
 GameObject:
   m_ObjectHideFlags: 0

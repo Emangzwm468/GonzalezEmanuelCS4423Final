@@ -11,7 +11,7 @@ public class BattleHud : MonoBehaviour
 
     public void SetData(Challengers challenger)
     {
-        health.HPSet((float)challenger.Health/ challenger.MaxHealth);
+        health.HPSet((float)challenger.Health / challenger.MaxHealth);
     }
 
     /*public void UpdateHealth()

@@ -17,3 +17,5 @@ MonoBehaviour:
   Maxhealth: 15
   attack: 5
   spd: 2
+  health: 15
+  knownAttacks: []

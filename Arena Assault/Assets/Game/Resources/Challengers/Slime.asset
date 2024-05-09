@@ -17,3 +17,6 @@ MonoBehaviour:
   Maxhealth: 10
   attack: 2
   spd: 1
+  health: 10
+  knownAttacks:
+  - attacks: {fileID: 11400000, guid: acb2d09406b38e84484cd8da97bd2850, type: 2}

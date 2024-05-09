@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class PlayerUnit : MonoBehaviour
 {
-    [SerializeField] Challengers challengers;
+    [SerializeField] EnemyHandler _challengers;
     [SerializeField] bool isPUnit;
 
     public Challengers Challengers { get; set; }
 
     public void Setup()
     {
-        /*challengers = new Challengers(Challenger);
+        Challengers = new Challengers(_challengers);
         if (isPUnit)
-            GetComponent<Image>().sprite = ;
+            GetComponent<Image>().sprite = Challengers.Challenger.FSprite;
         else
-            GetComponent<Image>().sprite = challengers;*/
+            GetComponent<Image>().sprite = Challengers.Challenger.FSprite;
     }
 
 }
