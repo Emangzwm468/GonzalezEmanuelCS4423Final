@@ -8,12 +8,21 @@ public class Challengers
 {
     EnemyHandler _challengers { get; set; }
 
-    int HP { get; set; }
+    public int HP { get; set; }
+
+    public List<Attacks> Attacks { get; set; }
 
     public Challengers(EnemyHandler pChallenger)
     {
         _challengers = pChallenger;
-        HP = MaxHealth;
+        HP = _challengers.MaxHealth;
+
+        /*Attacks = new List<Attacks>();
+        foreach (var attack in _challengers.Attacks)
+        {
+            if (attack.Count >= 4)
+                break;
+        }*/
     }
 
     public int Attack 
