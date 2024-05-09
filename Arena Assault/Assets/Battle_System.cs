@@ -24,6 +24,8 @@ public class Battle_System : MonoBehaviour
         pUnit.Setup();
         eUnit.Setup();
         PlayerAction();
+
+        dialougeBox.setAttackName(PlayerUnit.Challenger.Attacks);
         yield return null;
     }
 

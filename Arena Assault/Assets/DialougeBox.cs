@@ -52,4 +52,13 @@ public class DialougeBox : MonoBehaviour
                 actionText[i].color = Color.black;
         }
     }
+
+    public void setAttackName(List<Attacks> attacks)
+    {
+        for (int i = 0; i < moveText.Count; ++i)
+        {
+            if (i < attacks.Count)
+                moveText[i].text = attacks[i].Attacks_Handler.attackName;
+        }
+    }
 }

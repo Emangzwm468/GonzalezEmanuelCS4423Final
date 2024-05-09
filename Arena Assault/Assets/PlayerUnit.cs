@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class PlayerUnit : MonoBehaviour
 {
-    [SerializeField] EnemyHandler _challengers;
+    [SerializeField] EnemyHandler Challenger;
     [SerializeField] bool isPUnit;
 
     public Challengers Challengers { get; set; }
 
     public void Setup()
     {
-        Challengers = new Challengers(_challengers);
+        Challengers = new Challengers(Challenger);
         if (isPUnit)
             GetComponent<Image>().sprite = Challengers.Challenger.FSprite;
         else
